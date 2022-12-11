@@ -1,5 +1,6 @@
 * {
-
+padding: 0;
+margin: 0;
 }
 
 
@@ -14,10 +15,47 @@
 
 }
 
+body {
+background-color: var(--dkgrn);
+}
 
 
 
+h1 {
+    font-size: 48px;
+    display: inline-block;
+    color: var(--beige)
+}
 
+
+
+nav {
+
+}
+
+
+.header {
+font-family: 'Courier New', Courier, monospace;
+background-color: var(--ltgrn);
+}
+
+.flex {
+    display: flex;
+}
+
+.background-img {
+height: 800px;
+width: 100%;
+background-image: url("../images/background-2132913.jpg");
+background-size: cover;
+background-position: center;
+}
+
+.selfie {
+width: 300px;
+height: 300px;
+display: inline-block;
+}
 
 
 
@@ -32,3 +70,27 @@
 @media screen and (max-width: 480px) {
 
 }
+
+
+
+
+
+
+
+/* Flexbox syntax
+
+display: flex - makes a container a flex container
+
+justify-content - dictates how items will be distributed across the main axis
+align-items - dictates how items will be distributed on the cross axis
+
+flex-direction - changes the orientation of the main axis; row, column, row-reverse, column-reverse
+
+
+
+
+
+
+
+
+*/
