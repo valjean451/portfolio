@@ -1,6 +1,7 @@
 * {
 padding: 0;
 margin: 0;
+font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -8,9 +9,10 @@ margin: 0;
 :root {
 --dkgrn: rgb(57,81,68);
 --ltgrn: rgb(78,108,80);
---brown: rgb(170,139,86);
+--brown: rgb(112, 83, 32);
 --beige: rgb(240,235,206);
 --white: rgb(255, 255, 255);
+--dkblue: #39395f;
 --black: rgb(1,1,1);
 
 }
@@ -23,20 +25,54 @@ background-color: var(--dkgrn);
 
 h1 {
     font-size: 48px;
+    font-weight: bolder;
     display: inline-block;
-    color: var(--beige)
+    color: var(--beige);
+    margin-left: 60px;
+    margin-top: 10px;
 }
 
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-left: 25px;
+    color: var(--beige);
+}
 
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    
+    
+}
 
 nav {
+    float: right;
+    margin-right: 70px;
+}
 
+nav a {
+    display: inline-block;
+    margin-left: 30px;
+    color: var(--beige);
+    text-decoration: none;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+section {
+    position: relative;
 }
 
 
 .header {
-font-family: 'Courier New', Courier, monospace;
-background-color: var(--ltgrn);
+    
+    background-color: var(--ltgrn);
 }
 
 .flex {
@@ -44,21 +80,61 @@ background-color: var(--ltgrn);
 }
 
 .background-img {
-height: 800px;
-width: 100%;
-background-image: url("../images/background-2132913.jpg");
-background-size: cover;
-background-position: center;
+    height: 800px;
+    width: 100%;
+    background-image: url("../images/background-2132913.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .selfie {
-width: 300px;
-height: 300px;
-display: inline-block;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 150px;
+    left: 20%;
+}
+
+.about-me {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    width: 500px;
+    height: 600px;
+    background-color: var(--beige);
+    color: var(--brown);
+}
+
+.about-me ul {
+    margin-left: 50px;
+}
+
+.hero {
+    height: 800px;
+    width: 100%;
+}
+
+.heroheader {
+    color: var(--brown);
 }
 
 
+.section {
+    height: 800px;
+    width: auto;
+    margin: 50px;
+    background-color: var(--ltgrn);
+}
 
+.contact {
+    height: 600px;
+    width: auto;
+    margin: 25px 20% 25px 20%;
+    background-color: var(--beige);
+    color: var(--brown);
+    
+
+}
 
 
 /* media breakpoints at 480px and 768px */
