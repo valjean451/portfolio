@@ -21,7 +21,9 @@ body {
 background-color: var(--dkgrn);
 }
 
-
+main {
+    padding-top: 50px;
+}
 
 h1 {
     font-size: 48px;
@@ -33,7 +35,7 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     padding-top: 10px;
     margin-left: 25px;
@@ -41,19 +43,28 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     padding-top: 15px;
+}
 
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
 
+a:hover, a:active {
+    text-decoration: underline;
+    color: inherit;
 }
 
 nav {
     float: right;
     margin-right: 70px;
+    color: var(--beige)
 }
 
 nav a {
@@ -71,7 +82,11 @@ section {
 
 
 .header {
-
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
     background-color: var(--ltgrn);
 }
 
@@ -160,7 +175,10 @@ section {
     flex: 0 0 650px;
     background-color: var(--beige);
     margin: 25px 25px 25px 50px;
+    padding: 10px;
     display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 .secondary-card {
@@ -179,8 +197,21 @@ section {
     margin: 20px;
 }
 
+.mainprojectimg {
+    height: 500px;
+    width: 500px;
+    margin-top: 40px;
+    
+}
+
 
 /* media breakpoints at 480px and 768px */
+
+/* width 100% 
+height auto (or vice versa)
+aspect ratio */
+
+
 
 @media screen and (max-width: 768px) {
 
