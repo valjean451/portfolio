@@ -14,10 +14,9 @@
 
 
 <body>
-    <header class="header">
+    <header class="header flex">
         <h1>Kendall Cluff</h1>
-        <nav>
-            <!-- find a way to fix the nav to the viewport -->
+        <nav class="flex">
             <a href='#about-me'>About Me</a>
             <a href="#projects">Projects</a>
             <a href="#skills-experience">Skills and Experience</a>
@@ -26,24 +25,34 @@
     </header>
     <main id="about-me"> 
 
-        <section class="hero row-section">
-           <div class="background-img">
+        <section class="hero flex">
+           <div class="background-img flex">
            <img src="./assets/images/self.jpg" class="selfie" alt="A picture of Kendall Cluff">
            <div class="about-me">
-                <h2 class="heroheader">About Me</h2>
-                <ul>
-                    <li>I like cats, but I really like dogs</li>
-                    <li>I play a lot of D&D</li>
-                    <li>In general, I am fascinated by numbers</li>
-                </ul>
+                <h2>About Me:</h2>
+                <p>
+                    <em>Scholastically:</em> I went to business school to study Accounting, and finished up my undergraduate studies in December 2017. I was drawn to the Accounting field because I've always been a bit of a math nut, but Accounting specifically seemed like a field that was indispensable--everyone needs a tax guy.
+                </p>
+                <p>
+                    <em>Professionally:</em> I didn't end up working in the finanical field. Instead, I found work at a Fintech startup called Carta. Carta is a platform by which other startups manage their employee and investor's equity, and I have filled various Delivery and Sales roles in my 5 years there. They're super cool, check them out.
+                </p>
+                <p>
+                    <em>Personally:</em> this may not come as a shock, but I'm a huge nerd. On the gaming end i play D&D, WoW, Magic the Gathering, boardgames of all kinds, you name it I'm probably a fan. 
+                </p>
+                <p>
+                    I also have a passion for investing, both in the equities/derivatives market as well as real estate, and will ramble ad nausaeum about nerdy finance stuff like that. 
+                </p>
+                <p>
+                    Lastly, I'm an avid reader (well, listener; audiobooks are far more convenient) of books from many genres. If it's not a book, I'm listening to podcasts or music, for which I'm equally ravenous. 
+                </p>
            </div>
            </div>
         </section>
         
-        <section class="section" id="projects">
+        <section class="section flex" id="projects">
             <h2>Passion Projects</h2>
-            <div class="project-section">
-            <div class="main-card">
+            <div class="project-section flex">
+            <div class="main-card flex">
                 <h3>
                 <a target="_blank" href="https://github.com/valjean451/week1challenge">Code Refactor</a>
                 </h3>
@@ -51,19 +60,19 @@
                 <img src="./assets/images/css_example.PNG" class="mainprojectimg" alt="An image depicting a section of CSS code.">
                 </a>
             </div>
-            <div class="secondary-card">
+            <div class="secondary-card flex">
                 <h3>Project 2</h3>
                 <img src="./assets/images/coming-soon-2070393_640.jpg" class="placeholder" alt="">
             </div>
-            <div class="secondary-card">
+            <div class="secondary-card flex">
                 <h3>Project 3</h3>
                 <img src="./assets/images/coming-soon-2070393_640.jpg" class="placeholder" alt="">
             </div>
-            <div class="secondary-card">
+            <div class="secondary-card flex">
                 <h3>Project 4</h3>
                 <img src="./assets/images/coming-soon-2070393_640.jpg" class="placeholder" alt="">
             </div>
-            <div class="secondary-card">
+            <div class="secondary-card flex">
                 <h3>Project 5</h3>
                 <img src="./assets/images/coming-soon-2070393_640.jpg" class="placeholder" alt="">
             </div>
@@ -72,22 +81,33 @@
 
             <!-- continue to add to this section as you build things -->
         </section>
-
-        <section class="section" id="skills-experience">
-            <h2>Skills and Experience</h2>
-            <div></div>
-            <div></div>
-        </section>
-
-        <section class="contact" id="contact-me">
-            <h3>I would love to hear from you!</h3>
-            <div>
-               
+        <section class="section-split flex-row">
+        <div class="halfsection flex" id="skills-experience">
+            <div class="center-div">    
+                <h2>Skills and Experience</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>G Suite</li>
+                    <li>MS Office</li>
+                </ul>
             </div>
+        </div>
+
+        <div class="contact" id="contact-me">
+            <h3>I would love to hear from you!</h3>
+               <ul class="contactitems">
+                    <li>Email: <a href="mailto:kendall.cluff@gmail.com">kendall.cluff@gmail.com</a></li>
+                    <li>Phone: 801.721.2336</li>
+                    <li><a href="https://www.linkedin.com/in/kendall-cluff-cep-60b2a9124/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/valjean451" target="_blank">Github</a></li>
+                    
+               </ul>
 
             <figure></figure>
 
             <!-- improve this later with a form submission -->
+        </div>
         </section>
     </main>
     <footer>

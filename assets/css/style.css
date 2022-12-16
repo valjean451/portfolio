@@ -1,3 +1,5 @@
+/* ### General */
+
 * {
 padding: 0;
 margin: 0;
@@ -9,34 +11,33 @@ font-family: 'Courier New', Courier, monospace;
 :root {
 --dkgrn: rgb(57,81,68);
 --ltgrn: rgb(78,108,80);
---brown: rgb(112, 83, 32);
+--brown: rgb(92, 64, 51);
 --beige: rgb(240,235,206);
 --white: rgb(255, 255, 255);
 --dkblue: #39395f;
 --black: rgb(1,1,1);
-
 }
 
 body {
-background-color: var(--dkgrn);
+background-color: var(--brown);
 }
 
 main {
     padding-top: 50px;
 }
 
+h1, h2, h3 {
+    font-weight: bold;
+}
+
 h1 {
     font-size: 48px;
-    font-weight: bolder;
-    display: inline-block;
     color: var(--beige);
-    margin-left: 60px;
-    margin-top: 10px;
+    margin: 10px 0px 10px 60px;
 }
 
 h2 {
     font-size: 32px;
-    font-weight: bold;
     padding-top: 10px;
     margin-left: 25px;
     color: var(--beige);
@@ -44,11 +45,8 @@ h2 {
 
 h3 {
     font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 15px;
+    color: var(--black);
 }
 
 a, a:visited {
@@ -61,25 +59,22 @@ a:hover, a:active {
     color: inherit;
 }
 
-nav {
-    float: right;
-    margin-right: 70px;
-    color: var(--beige)
+/* ### Utilities */
+
+.flex {
+    display: flex;
 }
 
-nav a {
-    display: inline-block;
-    margin-left: 30px;
-    color: var(--beige);
-    text-decoration: none;
-    font-size: 24px;
-    padding-top: 20px;
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-section {
-    position: relative;
-}
 
+
+/* ### Header Styles */
 
 .header {
     position: fixed;
@@ -88,17 +83,70 @@ section {
     left: 0;
     z-index: 2;
     background-color: var(--ltgrn);
+    justify-content: space-between;
+    align-items: center;
 }
 
-.flex {
-    display: flex;
+nav {
+    margin-right: 70px;
+    color: var(--beige);
+}
+
+nav a {
+    margin-left: 30px;
+    color: var(--beige);
+    text-decoration: none;
+    font-size: 28px;
+}
+
+/* ### Content Styles */
+
+
+.section {
+    height: 800px;
+    width: auto;
+    margin: 50px;
+    background-color: var(--dkgrn);
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.section-split {
+    height: 300px;
+    width: auto;
+    margin: 0px 50px 25px 50px;
+    background-color: var(--brown);
+}
+
+.halfsection {
+    height: inherit;
+    width: 50%;
+    background-color: var(--brown);
+    justify-content: fiex-start;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.project-section {
+    height: inherit;
+    width: 100%;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: space-between;
+    margin-top: -50px;
+   
+}
+
+.hero {
+    height: 800px;
+    width: 100%;
+    flex-flow: row wrap;
 }
 
 .background-img {
     width: 100%;
     background-size: cover;
     background-image: url("../images/background-2132913.jpg");
-    display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
@@ -106,89 +154,64 @@ section {
 }
 
 .selfie {
-    width: 500px;
-    height: 500px;
-    margin-left: 150px;
+    width: 600px;
+    height: 600px;
+    margin-left: 100px;
     margin-right: 50px;
+    border-radius: 3%;
+
+    /* I would like to figure out how to get this image to scale but keep it's aspect ratio at some point. */
 }
 
 .about-me {
     width: 500px;
     height: 600px;
     background-color: var(--beige);
-    color: var(--brown);
+    color: var(--black);
     margin-right: 150px;
     flex: 0.5 0.5 auto; 
-    
-
+    border-radius: 15px;
 }
 
-.about-me ul {
-    margin-left: 50px;
+.about-me h2 {
+    margin-left: 20px;
+    color: inherit
 }
 
-.hero {
-    height: 800px;
-    width: 100%;
+.about-me p {
+    margin: 5px 20px 10px 20px;
+    font-size: 18px;
+    line-height: 1.25;
 }
 
-.heroheader {
-    color: var(--brown);
-}
-
-
-.section {
-    height: 800px;
-    width: auto;
-    margin: 50px;
-    background-color: var(--ltgrn);
-}
-
-.contact {
-    height: 600px;
-    width: auto;
-    margin: 25px 20% 25px 20%;
-    background-color: var(--beige);
-    color: var(--brown);
-
-
-}
-
-.row-section {
-    display: flex;
-    flex-flow: row wrap;
-    /* margins? */
-}
-
-.project-section {
-    height: inherit;
-    width: inherit;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: space-between;
-   
+.about-me em {
+    font-weight: bold;
 }
 
 .main-card {
     width: 650px;
-    flex: 0 0 650px;
     background-color: var(--beige);
     margin: 25px 25px 25px 50px;
     padding: 10px;
-    display: flex;
     flex-flow: column wrap;
     align-items: center;
+    border-radius: 3%;
+}
+
+.mainprojectimg {
+    height: 500px;
+    width: 500px;
+    margin-top: 40px;
+    border-radius: 3%;
 }
 
 .secondary-card {
     width: 300px;
-    flex: 0 0 300px;
     background-color: var(--beige);
     margin: 25px;
-    display: flex;
     flex-flow: column wrap;
     align-items: center;
+    border-radius: 3%;
 }
 
 .placeholder {
@@ -197,27 +220,195 @@ section {
     margin: 20px;
 }
 
-.mainprojectimg {
-    height: 500px;
-    width: 500px;
-    margin-top: 40px;
-    
+
+
+.center-div {
+    height: inherit;
+    width: 100%;
+    background-color: var(--dkgrn);
+    padding-top: 20px;
 }
 
 
-/* media breakpoints at 480px and 768px */
+.contact {
+    height: inherit;
+    width: 50%;
+    background-color: var(--beige);
+    color: var(--brown);
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+    padding-top: 20px;
+}
 
-/* width 100% 
-height auto (or vice versa)
-aspect ratio */
+ul {
+    margin: 20px 0px 0px 50px;
+    color: var(--beige);
+}
+
+ul li {
+    font-size: 28px;
+}
+
+.contactitems {
+    color: var(--black);
+    align-self:flex-start;
+    margin-left: 75px;
+}
+
+.contactitems a {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
 
 
+
+
+
+/* Media Queries */
+
+@media screen and (max-width:1820px) {
+    .selfie {
+        width: 500px;
+        height: 500px;
+        margin-left: 150px;
+    }
+
+    .about-me p {
+        font-size: 16px;
+    
+}
+}
+
+@media screen and (max-width: 1446px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    h1 {
+        margin-left: 30px;
+    }
+
+    nav {
+        margin: 0px 0px 0px 30px;
+    }
+
+    nav a {
+        margin: 0px 30px 10px 0px;
+    }
+
+    main {
+        padding-top: 100px;
+    }
+    .hero {
+        height: 1400px;
+    }
+
+    .background-img {
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .selfie {
+        margin: 70px 0px 50px 0px;
+    }
+
+    .about-me {
+        width: 800px;
+        height: auto;
+        margin: 0px 50px 50px 50px;
+    }
+
+    .section {
+        height: 1600px;
+        width: auto;
+        margin: 50px;
+        background-color: var(--dkgrn);
+        flex-flow: column wrap; 
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .project-section {
+        height: 1600px;
+        width: auto;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    ul {
+        margin: 20px 0px 0px 50px;
+        color: var(--beige);
+    }
+    
+    ul li {
+        font-size: 20px;
+    }
+
+
+    .section-split {
+        height: 200px;
+    }
+
+}
 
 @media screen and (max-width: 768px) {
 
+    nav {
+        flex-flow: column wrap;
+        margin: 0px 0px 0px 50px;
+    }
+
+    main {
+        padding-top: 225px;
 }
 
-@media screen and (max-width: 480px) {
+.about-me {
+    width: 550px;
+}
+
+.main-card {
+    width: 450px;
+    margin: 60px 10px 10px 10px;
+}
+
+.mainprojectimg {
+    height: 350px;
+    width: 350px;
+    margin-top: 10px;
+    border-radius: 3%;
+}
+
+.secondary-card {
+    width: 200px;
+}
+
+.placeholder {
+    height: 125px;
+    width: 125px;
+    margin: 20px;
+}
+
+
+.section {
+    height: 1000px;
 
 }
 
+
+.project-section {
+    height: 1000px;
+   
+}
+
+ul li {
+    font-size: 16px;
+}
+}
